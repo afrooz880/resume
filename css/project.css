@@ -1,0 +1,380 @@
+@import "normalize.css";
+@import "grid.css";
+
+@import "font.css";
+
+
+
+
+:root{
+    --text-color:#333333;
+    --shodow-color:rgba(19,182,255,0.24);
+    --app-bg-color:#fff;
+    --primary-color:#0ABEAD;
+    --pr-o-color:#f57f17;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+
+body{
+    /* font-family: "Poppins"; */
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--app-bg-color);
+    padding-top:12rem ;
+}
+
+
+/* reseat */
+ul{
+    list-style: none;
+     padding: 0;
+     margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.app-btn{
+
+
+    width: 14rem;
+    height: 4rem;
+    border: 1px solid cornsilk;
+    border-radius: 2rem;
+    background-color: #0ABEAD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 1.5rem  4rem rgba(11, 190, 173, 41%);
+}
+
+/* Helper classes */
+
+.align-items-center{
+    align-items: center;
+}
+
+
+.nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+
+
+.nav__logo {
+    color:var(--primary-color);
+    font-size: 5rem;
+    font-weight: 900;
+    /* font-family: "Poppinz Black"; */
+}
+
+
+ header{
+    box-shadow: 0 0.5rem 4rem var(--shodow-color);
+    position: fixed;  
+   right: 0;  
+    left: 0;
+    top: 0;
+      z-index: 100;  
+      background-color: var(--app-bg-color);
+}
+  
+
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     z-index: 100;  
+}
+
+
+.menu__link{
+    display: inline-block;
+    margin-left: 2rem;
+    color: var(--text-color);
+    /* font-family: "Poppinz Medium"; */
+    transition: color 150ms ease-in;
+    
+}
+
+.menu__link:hover{
+    color: var(--primary-color);
+}
+
+.menu__link--active{
+  color: var(--primary-color);
+}
+
+
+/* nav-btn */
+
+.nav-btn{
+    width: 5rem;
+    height: 5rem;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 2rem;
+}
+
+.nav-btn__line{
+    position: relative;}
+
+.nav-btn__line::after  , .nav-btn__line::before , .nav-btn__line{
+    content: "";
+    width:3rem;
+    height: 0.3rem;
+    background-color:var(--primary-color);
+    border-radius: 2rem;}
+
+  .nav-btn__line::after {
+    position: absolute;
+    top:0.8rem;
+}  
+
+.nav-btn__line::before {
+    position: absolute;
+    top:-0.8rem;
+}  
+ 
+
+
+.nav-btn--open .nav-btn__line::after {
+    transform:rotate(-45deg) translateY(-10px) translateX(3px) ;
+
+}
+ .nav-btn--open .nav-btn__line::before{
+    transform:rotate(45deg) translateY(9px) translateX(1px);
+
+}
+
+
+.nav-btn--open .nav-btn__line{
+    background-color: transparent;
+}
+
+/* main Home */
+
+
+main {
+
+}
+
+
+.home{
+    margin-top: 8rem;
+    display: flex;
+    background-image: url(../images/shapes/header-shape.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+ height:82rem;
+}
+
+
+.home__name{
+    color: var(--primary-color);
+    /* font-family: "Poppins-SemiBold"; */
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.home__name span{
+    color: var(--pr-o-color);
+}
+.home__title{
+    color: var(--primary-color);
+    font-size: 5rem;
+    /* font-family: "Poppins-Bold"; */
+    margin: 0;
+    
+}
+.home__caption{
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+.home__links-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+
+.home__link--color{
+    background-color: var(--pr-o-color);
+    /* margin-left: 2rem; */
+    box-shadow: 0 1.5rem 4rem rgba(245, 127, 23, 24%);
+}
+
+.home-picture{
+    color: #a4b0be;
+}
+
+
+
+/* .about-banner{
+    width: 100%;
+} */
+
+
+.home-picture__img{
+    width: 50rem;
+    height: 50rem;
+    border: 18px solid var(--app-bg-color);
+    box-shadow: 0 0.5rem 4rem var(--shodow-color);
+    border-radius: 50%;}
+    /* margin-top: 6rem;
+} */
+
+/* main About */
+
+.section-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
+    color: var(--primary-color);
+}
+
+
+
+.section-head__title{
+    font-size: 4.5rem;
+    margin:2rem  0 0 0;
+}
+
+
+.section-head__content{
+    margin: 0rem 0 2rem 0;
+}
+
+.section-head__line{
+    display: block;
+    width:19rem ;
+    height: 0.3rem;
+    background-color: var(--primary-color);
+
+    position: relative;
+}
+
+.section-head__line::after{
+    content:"";
+    position: absolute;
+    width: 2rem;
+    border-radius: 2rem;
+    height: 1rem;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color:var(--primary-color);
+    
+}
+
+.about{
+    margin-top: 2rem;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    /* gap: 5rem; */
+    border: 1px solid silver;
+    box-shadow: 5px 5px 4px seashell;
+    /* padding: 2rem; */
+}
+
+.Aboutus{
+    margin-top: 6rem;
+}
+
+.about-banner{
+    
+     flex-basis: 50%;
+     
+}
+.about-banner__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__content{
+    flex-basis:50%;
+    background-color: var(--app-bg-color);
+    padding:4rem;
+}
+
+
+.about__title{
+   font-family:"Poppins SemiBold";
+   font-size: 2.4rem;
+   margin-bottom: 0;
+ margin-top: 0;
+   color: var(--primary-color);
+}
+.about__description{
+    margin-top: 0;
+    margin-bottom: 6rem;
+}
+
+.about-list{
+margin-left: 1rem;
+}
+.about__list-title{
+   color: var(--primary-color);
+    margin-top: 0;
+    font-family:"Poppins SemiBold";
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about-list__item{
+    margin-bottom: 1rem;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.about-list__item:last-child{
+    margin-bottom: 0;
+}
+.about-list__item::before{
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: var(--pr-o-color);
+    border-radius: 2rem;
+    position: absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.about__links{
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.about__link--color{
+    background-color: var(--pr-o-color);
+}
+
+
